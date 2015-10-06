@@ -4,9 +4,13 @@ $(document).ready(function() {
     $("ul#cat").prepend("<li>meow</li>");
     $("ul#dog").prepend("<li>bark bark</li>");
 
+    // $("ul#cat").children("li").click(function() {
+    //   $(this).css("background-color", "green");
+    // });
     $("ul#cat").children("li").click(function() {
-      $(this).css("background-color", "green");
+      $(this).remove();
     });
+
   });
 
   $("button#bark").click(function() {
@@ -18,6 +22,9 @@ $(document).ready(function() {
     });
   });
 
+  $("button#add").click(function() {
+    $("p#imgbox").after("<img id='theImg' src='http://lorempixel.com/400/200/'/>");
+  });
 
 
 });
